@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Categories from "./components/Categories/Categories.jsx";
+import JobDetails from "./components/JobDetails/JobDetails.jsx";
 import MainPage from "./components/MainPage/MainPage.jsx";
 import Root from "./components/Root/Root.jsx";
 import "./index.css";
@@ -14,10 +14,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <MainPage></MainPage>,
+        loader: () => fetch("jobs.json"),
       },
+      // {
+      //   path: "/feature",
+      //   element: <Features></Features>,
+      // },
       {
-        path: "/categorys",
-        element: <Categories></Categories>,
+        path: "/details/:id",
+        element: <JobDetails></JobDetails>,
+        // loader: () => fetch("jobs.json"),
       },
     ],
   },

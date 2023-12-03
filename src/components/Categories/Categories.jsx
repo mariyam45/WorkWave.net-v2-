@@ -19,7 +19,7 @@ const Categories = () => {
         Explore thousands of job opportunities with all the information you
         need. Its your future
       </p>
-      <div className="categories mt-4">
+      <div className="categories mt-4 grid-cols-4">
         {categories.map((category) => (
           <Category category={category} key={category.id}></Category>
         ))}

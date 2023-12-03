@@ -1,0 +1,23 @@
+.title .img2 {
+  position: absolute;
+  top: 0 !important;
+  right: 0;
+  height: 150px;
+}
+.title .img1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+}
+.title h2 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+}
+.title {
+  position: relative;
+  background: linear-gradient(to bottom left, #faedff, #ffffff) !important;
+  height: 200px;
+}
