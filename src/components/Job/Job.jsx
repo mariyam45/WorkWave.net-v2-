@@ -45,7 +45,7 @@ const Job = ({ job }) => {
         </div>
       </div>
       {/* <Link to={`/details/${id}`}> */}
-      <Link to={{ pathname: `/details/${id}`, state: { jobs } }}>
+      <Link to={`/details/${id}`}>
         <button className="btn job_dtls_btn px-3 ">View Details</button>
       </Link>
     </div>
