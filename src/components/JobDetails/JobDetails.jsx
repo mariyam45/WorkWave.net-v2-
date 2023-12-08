@@ -1,44 +1,32 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { jobData } from "../JobsData/JobsData";
 import "./JobDetails.css";
 
 const JobDetails = () => {
   const { id } = useParams();
-  // const [data, setData] = useState({});
-  // const featuredJob = useLoaderData();
-  // useEffect(() => {
-  //   setData(featuredJob[id]);
-  // }, [id]);
-  // console.log(data.job_title);
-  // ...........
-  // const jobs = useLoaderData();
-  //   const [jobs, setJobs] = useState([]);
-  //   useEffect(() => {
-  //     fetch("jobs.json")
-  //       .then((res) => res.json())
-  //       .then((data) => setJobs(data));
-  //   }, []);
-  //   console.log(data);
+  const filterById = jobData.filter((jd) => jd.id === id);
 
-  //   const location = useLocation();
-  //   const { jobs } = location.state || {};
-  //   console.log(job.children);
-  //   //   if (!job) {
-  //     return <div className="details_cont">No Details found</div>;
-  //   }
+  // const setJobDetails = (id) => {
+
+  // const jobDetail = jobData.filter((job) => job.id === id);
+  // setJobD(jobDetail);
+  console.log(jobData);
+  console.log(filterById);
+  console.log(filterById[0]?.job_title);
+  // };
+  // setJobDetails();
 
   return (
     <div>
       <div className="title ">
         <img className="img1" src="../../../assets/images/bg1.png" alt="" />
-        <h2 className=" ">Job details for : {id}</h2>
+        <h2 className=" ">Job details for : {filterById[0]?.job_title}</h2>
         <img className="img2" src="../../../assets/images/bg2.png" alt="" />
       </div>
 
       <div className="details_cont md:w-4/6 mx-auto flex md:mt-14 mt-8">
-        {/* {jobs.map((job) => (
-            <h2 key={job.id}>{job.id}</h2>
-          ))} */}
+        {/* {jobData.filter((job) => job.id === id)} */}
 
         <div className="details_left w-4/6 mr-4">
           <p>
@@ -78,6 +66,7 @@ const JobDetails = () => {
             </div>
             <div>
               <img src="../../../assets/icons/money.png" alt="" />
+
               <p>
                 <span>Job title : </span>Product Designer
               </p>

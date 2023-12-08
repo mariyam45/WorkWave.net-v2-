@@ -6,6 +6,7 @@ import Features from "../Features/Features";
 
 const MainPage = () => {
   const featureJob = useLoaderData();
+
   // console.log(featureJob);
   return (
     <div className="">
