@@ -2,7 +2,7 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 w-4/6 mx-auto">
       <div className="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" checked="checked" />
         <div className="collapse-title text-xl font-medium">
@@ -36,7 +36,7 @@ const Blogs = () => {
       <div className="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title text-xl font-medium">
-          Click to open this one and close others
+          User What is a custom hook?
         </div>
         <div className="collapse-content">
           <p>
@@ -60,19 +60,52 @@ const Blogs = () => {
       <div className="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title text-xl font-medium">
-          Click to open this one and close others
+          What is useRef?
         </div>
         <div className="collapse-content">
-          <p>hello</p>
+          <p>
+            useRef is a Hook in React that provides a way to create mutable
+            object properties that persist across renders without causing the
+            component to re-render. It returns a mutable object called a "ref
+            object" with a current property. The current property can be
+            assigned any value, and it will persist between renders. Key points
+            about useRef: Preserving Values Across Renders: useRef is commonly
+            used to hold values that need to persist across renders without
+            triggering a re-render. Imperative Access to DOM Elements: It is
+            often used to gain imperative access to a DOM element. You can
+            assign the ref attribute to a React element, and the current
+            property of the useRef object will point to the underlying DOM
+            element. Avoiding Re-renders: Unlike useState, changing the current
+            property of a useRef object does not trigger a re-render of the
+            component. Initialization: useRef can be initialized with an initial
+            value, but its primary use is to hold mutable values that might
+            change over time.
+          </p>
         </div>
       </div>
       <div className="collapse collapse-arrow bg-base-200 mb-5">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title text-xl font-medium">
-          Click to open this one and close others
+          What is useMemo?
         </div>
         <div className="collapse-content">
-          <p>hello</p>
+          <p>
+            useMemo is a React Hook used for memoization, a technique to
+            optimize performance by memoizing the result of a function and
+            returning the cached result when the inputs to that function have
+            not changed. It is particularly useful for expensive calculations or
+            computations that don't need to be recomputed on every render. Key
+            points about useMemo: Memoization: useMemo memoizes the result of a
+            function and returns the cached result when the inputs
+            (dependencies) have not changed. Performance Optimization: It helps
+            optimize the performance of a React application by preventing
+            unnecessary recalculations of values during renders. Dependencies:
+            useMemo takes two arguments: a function (the memoized function) and
+            an array of dependencies. The memoized function is only re-executed
+            when the dependencies change. Expensive Computations: It is commonly
+            used for caching the results of expensive computations, preventing
+            the recalculation of the same result on every render.
+          </p>
         </div>
       </div>
     </div>
