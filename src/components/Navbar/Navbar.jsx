@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -29,10 +30,17 @@ const Navbar = () => {
                 <a>Statistics</a>
               </li>
               <li>
-                <a>Applied Job</a>
+                <a href="">
+                  <Link to="/applied">Applied Job</Link>
+                </a>
+
+                <a></a>
               </li>
               <li>
-                <a>Blog</a>
+                <a href="">
+                  {" "}
+                  <Link to="/blogs">Blog</Link>
+                </a>
               </li>
             </ul>
           </div>
